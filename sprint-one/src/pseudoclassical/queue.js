@@ -21,12 +21,10 @@ Queue.prototype.dequeue = function() {
   }
   this.storage = obj
   this.lastIndex--;
-  console.log(this.storage)
   return item
 }
 
 Queue.prototype.size = function() {
-  console.log(this.storage)
   if (this.lastIndex < 0){
     return 0;
   }

@@ -12,7 +12,6 @@ var Stack = function() {
     } else {
       storage[Math.max(...keys) + 1] = value
     }
-    console.log(storage)
   };
 
   someInstance.pop = function() {
@@ -20,7 +19,6 @@ var Stack = function() {
     var last = Math.max(...keys);
     var item = storage[last]
     delete storage[last];
-    console.log(storage)
     return item;
   };
 
@@ -30,11 +28,3 @@ var Stack = function() {
 
   return someInstance;
 };
-
-
-var stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.pop()
-console.log(stack.size())

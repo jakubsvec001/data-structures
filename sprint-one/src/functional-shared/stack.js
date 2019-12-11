@@ -15,7 +15,6 @@ var stackMethods = {
     } else {
       this.storage[Math.max(...keys) + 1] = value
     }
-    console.log(this.storage);
   },
 
   pop: function() {

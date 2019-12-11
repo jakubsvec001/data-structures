@@ -16,18 +16,15 @@ class Queue {
     var item = this.storage[0]
     delete this.storage[0]
     var obj = {}
-    console.log(this.storage)
     for (let key in this.storage){
       obj[+key - 1] = this.storage[key];
     }
     this.storage = obj
     this.lastIndex--;
-    console.log(this.storage)
     return item
   }
 
   size(){
-    console.log(this.storage)
     if (this.lastIndex < 0){
       return 0;
     }
@@ -36,12 +33,3 @@ class Queue {
 }
 
 
-var queue = new Queue()
-
-queue.enqueue(1)
-queue.enqueue(2)
-console.log(queue.size())
-queue.enqueue(3)
-console.log(queue.size())
-queue.dequeue()
-console.log(queue.size())
