@@ -16,7 +16,7 @@ Queue.prototype.dequeue = function() {
   var item = this.storage[0]
   delete this.storage[0]
   var obj = {}
-  for (key in this.storage){
+  for (let key in this.storage){
     obj[+key - 1] = this.storage[key];
   }
   this.storage = obj
@@ -33,11 +33,3 @@ Queue.prototype.size = function() {
   return this.lastIndex + 1
 }
 
-
-var queue = new Queue()
-
-queue.enqueue(1)
-queue.enqueue(2)
-queue.enqueue(3)
-console.log(queue.dequeue())
-console.log(queue.size())

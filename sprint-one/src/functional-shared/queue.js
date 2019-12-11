@@ -19,7 +19,7 @@ var queueMethods = {
     var item = this.storage[0]
     delete this.storage[0]
     var obj = {}
-    for (key in this.storage){
+    for (let key in this.storage){
       obj[+key - 1] = this.storage[key];
     }
     this.storage = obj

@@ -16,7 +16,7 @@ var Queue = function() {
     var item = storage[0]
     delete storage[0]
     var obj = {}
-    for (key in storage){
+    for (let key in storage){
       obj[+key - 1] = storage[key];
     }
     storage = obj
