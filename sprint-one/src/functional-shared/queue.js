@@ -10,7 +10,6 @@ var Queue = function() {
 
 var queueMethods = {
   enqueue: function(value) {
-    console.log(this.storage)
     this.lastIndex++
     this.storage[this.lastIndex] = value;
   },

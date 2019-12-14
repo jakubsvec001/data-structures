@@ -9,7 +9,6 @@ class Queue {
   enqueue(value) {
     this.lastIndex++
     this.storage[this.lastIndex] = value;
-    console.log(this.storage)
     }
 
   dequeue(){

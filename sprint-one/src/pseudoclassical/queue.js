@@ -9,7 +9,6 @@ var Queue = function() {
 Queue.prototype.enqueue = function(value) {
   this.lastIndex++
   this.storage[this.lastIndex] = value;
-  console.log(this.storage)
   },
 
 Queue.prototype.dequeue = function() {
